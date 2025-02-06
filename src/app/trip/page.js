@@ -5,7 +5,6 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Upload, Trash, XCircle, Edit } from "lucide-react";
 import Image from "next/image";
-import Snowfall from "react-snowfall";
 import { useRouter } from "next/navigation";
 
 export default function ShotChallenge() {
@@ -59,7 +58,6 @@ export default function ShotChallenge() {
 
   return (
     <div className="relative min-h-screen bg-blue-900 text-white p-6 flex flex-col items-center">
-      <Snowfall />
       <h1 className="text-4xl font-bold text-center mb-6">🏂 Snowboarding Trip Challenge 🏔️</h1>
       <div className="mb-4 flex gap-2">
         <input
