@@ -1,11 +1,20 @@
 "use client";
 
+import { Suspense } from "react";
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, XCircle } from "lucide-react";
 
 export default function PhotoViewer() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center h-screen bg-black text-white">Loading...</div>}>
+      <PhotoViewerContent />
+    </Suspense>
+  );
+}
+
+function PhotoViewerContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const albumIndex = parseInt(searchParams.get("album"), 10);
